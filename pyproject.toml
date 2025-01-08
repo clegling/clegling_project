@@ -1,0 +1,24 @@
+[project]
+name = "project_clegling"
+version = "0.1.0"
+description = "Test Project"
+authors = [
+    {name = "Alexander Ashikhmin"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "prompt (>=0.4.1,<0.5.0)"
+]
+
+[tool.poetry]
+packages = [
+    { include = "project_func" },
+]
+
+[tool.poetry.scripts]
+project = "project_clegling.project_func.scripts.main_base:main"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
